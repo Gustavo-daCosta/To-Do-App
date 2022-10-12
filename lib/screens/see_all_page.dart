@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 
 /*
 tenho que arranjar um jeito de pedir somente um model
@@ -6,7 +6,7 @@ seja ele uma categoria ou uma tarefa
 
 
 talvez dar a opção de opcionalmente dar tanto o model de tarefa
-quanto o model de categoria e fazer uma verficação de qual model
+quanto o model de categoria e fazer uma verificação de qual model
 foi enviado
 */
 /*

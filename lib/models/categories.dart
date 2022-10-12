@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class Categorie {
   final String name;
   final IconData icon;
-  final Color? color;
+  final Color color;
 
-  Categorie({
+  const Categorie({
     required this.name,
     required this.icon,
     required this.color,
@@ -18,7 +18,7 @@ final List<Categorie> categories = [
     color: Colors.brown[700]!,
     icon: Icons.work_rounded,
   ),
-  Categorie(
+  const Categorie(
     name: "Study",
     color: Colors.indigo,
     icon: Icons.school,

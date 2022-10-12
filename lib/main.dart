@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:to_do/screens/home_page.dart';
-import 'package:to_do/screens/new_task.dart';
 
-void main() => runApp(const ToDoApp());
+void main() {
+  runApp(const ToDoApp());
+}
 
 class ToDoApp extends StatelessWidget {
   const ToDoApp({Key? key}) : super(key: key);
@@ -16,12 +17,12 @@ class ToDoApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: Colors.black
         ),
-        scaffoldBackgroundColor: const Color.fromARGB(255, 241, 247, 250),
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.blueAccent[700],
+        scaffoldBackgroundColor: const Color.fromARGB(255, 241, 247, 250), 
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black87,
         )
       ),
-      home: NewTaskPage(),
+      home: const HomePage(), 
     );
   }
 }

@@ -29,9 +29,11 @@ O aplicativo está sendo inteiramente desenvolvido em **Flutter**
 
 **Plugins e Bibliotecas utilizadas:**
 
+- [provider](https://pub.dev/packages/provider)
 - [sqflite](https://pub.dev/packages/sqflite)
 - [path](https://pub.dev/packages/path)
-- [datetime_picker_formfield](pub.dev/packages/datetime_picker_formfield)
+- [intl](https://pub.dev/packages/intl)
+- [google_nav_bar](https://pub.dev/packages/google_nav_bar)
 
 Para encontrar todas as configurações, veja o arquivo [pubspec.yaml](pubspec.yaml)
 

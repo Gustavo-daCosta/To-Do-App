@@ -46,7 +46,12 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# other files
+.metadata
+analysis_options.yaml
 .todo
+
+# other folders
 /windows
 /web
 /linux
