@@ -30,13 +30,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  provider:
   sqflite:
   path:
-  google_nav_bar:
-  provider:
   intl:
+  google_nav_bar:
   animated_text_kit: ^4.2.2
   introduction_screen: ^3.0.2
+  shared_preferences: ^2.0.15
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

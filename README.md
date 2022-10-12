@@ -2,6 +2,14 @@
 
 Este aplicativo é um aplicativo de gerenciamento de tarefas, através dele você pode definir tarefas, objetivos e metas, definir uma data para conclusão destas tarefas e ainda separá-las em diferentes categorias.
 
+## Status do projeto
+
+> Status do projeto
+
+<a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public." /></a>
+
+WIP - O projeto está em fase de desenvolvimento inicial, em que ainda não há uma versão estável e utilizável para o público
+
 ## Demonstração
 
 Demonstração da tela inicial do aplicativo:
@@ -34,6 +42,9 @@ O aplicativo está sendo inteiramente desenvolvido em **Flutter**
 - [path](https://pub.dev/packages/path)
 - [intl](https://pub.dev/packages/intl)
 - [google_nav_bar](https://pub.dev/packages/google_nav_bar)
+- [animated_text_kit](https://pub.dev/packages/animated_text_kit)
+- [introduction_screen](https://pub.dev/packages/introduction_screen)
+- [shared_preferences](https://pub.dev/packages/shared_preferences)
 
 Para encontrar todas as configurações, veja o arquivo [pubspec.yaml](pubspec.yaml)
 
@@ -57,17 +68,15 @@ Se você deseja um arquivo APK do aplicativo, você pode baixar o código fonte 
 ```
 flutter build apk
 ```
-Assim um APK do aplicativo será gerado, para acessá-lo, dentro da pasta do projeto você deve seguir o caminho `build\apps\output\apk` e o arquivo APK deverá estar disponível na pasta `apk`  
+Assim um APK do aplicativo será gerado, para acessá-lo, dentro da pasta do projeto você deve seguir o caminho `build\apps\output\apk` e o arquivo APK deverá estar disponível na pasta `\apk`  
 
 
 OBS: Para o funcionamento correto dos comandos, você deve ter o Flutter instalado em seu computador.
 ## Feedback
 
-Se você tiver algum feedback, por favor nos deixe saber por meio deste [email](mailto:gustavog.costa.997@gmail.com)
+Se você tiver algum feedback, dúvida ou reclamação, por favor, me envie um [email](mailto:suporte.apps11@gmail.com)
 
 
-## Autores
+## Autor
 
 - [@Gustavo-daCosta](https://www.github.com/Gustavo-daCosta)
-
-
