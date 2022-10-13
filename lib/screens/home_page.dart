@@ -135,48 +135,13 @@ Widget homePageTitle() {
         displayFullTextOnTap: true,
         isRepeatingAnimation: false,
       ),
-      AnimatedTextKit(
-        animatedTexts: [
-          TypewriterAnimatedText(
-            "\$numberOfTasksPending tasks pending",
-            textStyle: TextStyle(
-              fontSize: 16,
-              color: Colors.grey[600],
-            ),
-            //speed: const Duration(milliseconds: 200),
-          ),
-        ],
-        displayFullTextOnTap: true,
-        isRepeatingAnimation: false,
+      Text(
+        "\$numberOfTasksPending tasks pending",
+        style: TextStyle(
+          fontSize: 16,
+          color: Colors.grey[600]
+        ),
       ),
     ],
   );
 }
-
-/*return Padding(
-    padding: const EdgeInsets.all(8),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        // Title
-        const Text(
-          // This title is just for test purposes
-          "What's up, \$name!",
-          style: TextStyle(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-
-        // Subtitle
-        Text(
-          // This subtitle is just for test purposes
-          "\$numberOfTasksPending tasks pending",
-          style: TextStyle(
-            fontSize: 16,
-            color: Colors.grey[600]
-          ),
-        )
-      ],
-    ),
-  );*/
