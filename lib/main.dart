@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:after_layout/after_layout.dart';
+import 'package:is_first_run/is_first_run.dart';
+import 'package:to_do/components/drawer.dart';
 import 'package:to_do/screens/home_page.dart';
-import 'package:to_do/screens/introduction_screens/intro_screen.dart';
+import 'package:to_do/screens/intro_screen.dart';
+import 'package:to_do/theme/theme.dart';
 
 void main() {
   runApp(const ToDoApp());
@@ -15,17 +16,8 @@ class ToDoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.blueAccent[700],
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          secondary: Colors.black
-        ),
-        scaffoldBackgroundColor: const Color.fromARGB(255, 241, 247, 250), 
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black87,
-        )
-      ),
-      home: const IntroScreen(), 
+      theme: theme,
+      home: const HiddenDrawer(),
     );
   }
 }
@@ -34,33 +26,22 @@ class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
 
   @override
-  SplashState createState() => SplashState();
+  State<Splash> createState() => _SplashState();
 }
 
-class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
-  Future checkFirstSeen() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool seen = (prefs.getBool('seen') ?? false);
+class _SplashState extends State<Splash> {
+  bool isFirstRun = true;
 
-    if (seen) {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const HomePage()));
-    } else {
-      await prefs.setBool('seen', true);
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const IntroScreen()));
-    }
+  void checkFirstRun() async {
+    bool ifr = await IsFirstRun.isFirstRun();
+    setState(() {
+      isFirstRun = ifr;
+    });
   }
 
   @override
-  void afterFirstLayout(BuildContext context) => checkFirstSeen();
-
-  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child:  Text('Loading...'),
-      ),
-    );
+    checkFirstRun();
+    return isFirstRun ? const IntroScreen() : const HomePage();
   }
 }

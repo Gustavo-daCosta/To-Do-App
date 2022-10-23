@@ -37,8 +37,10 @@ dependencies:
   google_nav_bar:
   animated_text_kit: ^4.2.2
   introduction_screen: ^3.0.2
-  shared_preferences: ^2.0.15
-  after_layout: ^1.2.0
+  is_first_run: ^1.0.0
+  flutter_native_splash:
+  flutter_launcher_icons:
+  hidden_drawer_menu: ^3.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -58,6 +60,27 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+flutter_native_splash:
+  color: "#495e8c"
+  image: "assets/icons/to-do-list.png"
+  image_dark: assets/icons/to-do-list.png
+  color_dark: "#0e2948"
+  icon_background_color_dark: "#b8b6b6"
+  
+  android_12:
+    image: "assets/icons/to-do-list.png"
+    color: "#495e8c"
+    icon_background_color: "#ffffff"
+    image_dark: "assets/icons/to-do-list.png"
+    color_dark: "#0e2948"
+    icon_background_color_dark: "#b8b6b6"
+
+flutter_icons:
+  android: "to_do"
+  ios: true
+  image_path: "assets/icons/to-do-list.png"
+  min_sdk_android: 21
+
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -72,6 +95,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
+    - assets/icons/to-do-list.png
     - assets/images/checklist.png
     - assets/images/clip-girl-studying.png
     - assets/images/phone-rocket.png

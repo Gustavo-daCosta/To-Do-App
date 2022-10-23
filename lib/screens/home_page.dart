@@ -3,7 +3,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:to_do/models/categories.dart';
 import 'package:to_do/components/lists/categorie_list.dart';
 import 'package:to_do/components/lists/task_list.dart';
-import 'package:to_do/screens/new_task.dart';
+import 'package:to_do/screens/tasks/new_task.dart';
+import 'package:to_do/components/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,19 +12,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(),
-      appBar: AppBar(
-        title: const Text(
-          "To-Do",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
-        elevation: 1,
-      ),
+      //drawer: const HiddenDrawer(),
+      //drawer: drawer(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
@@ -109,7 +99,10 @@ class HomePage extends StatelessWidget {
             },
             child: Text(
               buttonTitle,
-              style: const TextStyle(fontSize: 16),
+              style: TextStyle(
+                fontSize: 16,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
             ),
           ),
         ],
