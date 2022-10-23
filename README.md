@@ -17,7 +17,9 @@ Demonstração da tela inicial do aplicativo:
 <div class="column">
   <img src="https://iili.io/Sr7Egt.png" alt="Imagem da tela inicial" width="250"/>
   <img src="https://iili.io/Sra3tj.gif" alt="Gif da tela inicial" width="265"/>
-</div>
+</div><br>
+
+> ⚠️ Vídeos antigos ⚠️
 
 ## Funcionalidades futuras
 
@@ -26,9 +28,11 @@ List de funcionalidades que eu pretendo implementar no futuro:
 - Implementar um tema escuro
 - Implementar calendário para visualização alternativa do quadro de tarefas pendentes
 - Implementar animações nas transições de tela
-- Implementar Drawer (barra lateral)
 - Implementar Bottom App Bar
 - Adicionar novas funções ao botão flutuante
+- Dar a opção para o usuário criar suas próprias categorias
+- Implementar sistema de login
+- Dar a opção do usuário salvar suas configurações, tarefas e categorias na nuvem para evitar perdas
 
 
 ## Stack utilizada
@@ -44,7 +48,8 @@ O aplicativo está sendo inteiramente desenvolvido em **Flutter**
 - [google_nav_bar](https://pub.dev/packages/google_nav_bar)
 - [animated_text_kit](https://pub.dev/packages/animated_text_kit)
 - [introduction_screen](https://pub.dev/packages/introduction_screen)
-- [shared_preferences](https://pub.dev/packages/shared_preferences)
+- [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)
+- [hidden_drawer_menu](https://pub.dev/packages/hidden_drawer_menu)
 
 Para encontrar todas as configurações, veja o arquivo [pubspec.yaml](pubspec.yaml)
 
@@ -74,7 +79,7 @@ Assim um APK do aplicativo será gerado, para acessá-lo, dentro da pasta do pro
 OBS: Para o funcionamento correto dos comandos, você deve ter o Flutter instalado em seu computador.
 ## Feedback
 
-Se você tiver algum feedback, dúvida ou reclamação, por favor, me envie um [email](mailto:suporte.apps11@gmail.com)
+Se você tiver algum feedback, dúvida, sugestão ou reclamação, por favor, me envie um [email](mailto:suporte.apps11@gmail.com)
 
 
 ## Autor
