@@ -12,8 +12,25 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //drawer: const HiddenDrawer(),
-      //drawer: drawer(context),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: (() {
+            drawerController.isOpen!() ? drawerController.close!() : drawerController.open!();
+            debugPrint("${drawerController.isOpen!()}");
+          }),
+        ),
+        title: const Text(
+          "To Do",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 1,
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(

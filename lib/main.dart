@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:is_first_run/is_first_run.dart';
 import 'package:to_do/components/drawer.dart';
-import 'package:to_do/screens/home_page.dart';
 import 'package:to_do/screens/intro_screen.dart';
 import 'package:to_do/theme/theme.dart';
+import 'package:get/get.dart';
 
 void main() {
+  Get.put<MyDrawerController>(MyDrawerController());
+
   runApp(const ToDoApp());
 }
 
@@ -17,7 +19,7 @@ class ToDoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme,
-      home: const HiddenDrawer(),
+      home: const Splash(),
     );
   }
 }
@@ -42,6 +44,6 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     checkFirstRun();
-    return isFirstRun ? const IntroScreen() : const HomePage();
+    return isFirstRun ? const IntroScreen() : const HiddenDrawer();
   }
 }
