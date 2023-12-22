@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:to_do/screens/home_page.dart';
+import 'package:to_do/components/drawer.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -65,7 +65,7 @@ class _IntroScreenState extends State<IntroScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomePage(),
+            builder: (context) => const HiddenDrawer(),
           )
         );
       }

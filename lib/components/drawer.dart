@@ -60,7 +60,7 @@ class MenuScreen extends GetView<MyDrawerController> {
         drawerOption(Icons.home, "Home Page", () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => const HomePage(),
+              builder: (context) => const HiddenDrawer(),
             ),
           );
         }),
